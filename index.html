@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Diana</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+
+<button class="music-toggle" onclick="toggleMusic()">
+    <i class="fas fa-music"></i>
+</button>
+
+
+<!-- HOME -->
+<section class="home_sec app-section">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="video/birthday.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h2 class="small-text">Hi Diana ...</h2>
+
+        <h1 class="title">
+            <span id="typewriter"></span>
+        </h1>
+
+        <p class="subtitle"><b>Do you want to see your little birthday gift?</b></p>
+
+        <div class="btn-group">
+            <button class="btn yes" onclick="opengiftSection()">YES PLEASE</button>
+            <button class="btn no" onclick="openNoSec()">NO THANKS</button>
+        </div>
+    </div>
+</section>
+
+<!-- NO SECTION -->
+<section class="no_section app-section none">
+    <div class="content no_content">
+        <h2>Are you sure? It's a surprise, I promise you will love it.</h2>
+        <button class="btn back" onclick="goBack()">Retry</button>
+    </div>
+</section>
+
+<!-- GIFTS -->
+<section class="giftSection app-section none">
+    <div class="content">
+        <h2 class="gifts-title">Three gifts for you my dear.</h2>
+        <p class="gifts-subtitle">Click each to open. Enjoy..</p>
+
+        <div class="gifts-container">
+            <div class="gift-card" data-gift="1">🎁<span>Gift One</span></div>
+            <div class="gift-card" data-gift="2">💝<span>Gift Two</span></div>
+            <div class="gift-card" data-gift="3">💖<span>Gift Three</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SLIDER -->
+<section class="slider-section app-section none">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+
+    <h2 class="slider-title">A few memories ❤️</h2>
+    <p class="slider-text">Every picture holds a smile, a moment, a piece of my heart.</p>
+
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="pictures/picture1.png">
+            <img src="pictures/picture2.png">
+            <img src="pictures/picture3.png">
+        </div>
+    </div>
+
+    <div class="dots">
+        <span class="dot active" onclick="moveSlide(0)"></span>
+        <span class="dot" onclick="moveSlide(1)"></span>
+        <span class="dot" onclick="moveSlide(2)"></span>
+    </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="message-section app-section none" id="message">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+
+    <div class="hearts">
+        <span>💗</span><span>💖</span><span>❤️</span><span>💘</span><span>💞</span>
+    </div>
+
+    <div class="message-container">
+        <h2 class="message-title">A Message From My Heart 💖</h2>
+
+        <p class="message-line">Happy Birthday my love 🎂❤️</p>
+        <p class="message-line">
+            I know there were a few things you wished for, and I wish I could have
+            bought every single one of them for you.
+        </p>
+        <p class="message-line">
+            Life didn’t allow me to do that this time, but instead of buying gifts,
+            I spent my time building this little masterpiece just for you.
+        </p>
+        <p class="message-line">
+            Every line, every detail, every moment was created with you in mind —
+            hoping it would make you smile.
+        </p>
+        <p class="message-line">
+            You mean more to me than any gift I could buy.
+            Happy Birthday, my heart. 💕
+        </p>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/love.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section app-section none">
+    <button class="back-btn" onclick="goBack()">← Back</button>
+
+    <h2 class="video-title">One Last Thing… ❤️</h2>
+    <p class="video-text">Sit back and enjoy.</p>
+
+    <div class="video-container">
+        <iframe
+            id="yt-player"
+            src="https://www.youtube.com/embed/NYgdDCRYnN8?enablejsapi=1"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p class="signature">Made with love by Jamedia 💖</p>
+
+    <button class="restart-btn" onclick="restartExperience()">↺ Restart</button>
+
+    <div class="confetti"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
